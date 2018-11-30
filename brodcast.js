@@ -7,10 +7,16 @@ client.on('ready', () => {
 
 
 
-client.login('NTEyNzQ5NTQ4MjU5NzcwMzcw.Ds-CIg.oJouMLa0-O3EiUYz545FVGogWJk');
-
-
-
+client2.on('message', message => {
+    if (message.content === '$help') {
+        let helpEmbed = new Discord.RichEmbed()
+        .setTitle('**أوامر...**')
+        .setDescription('**برفكس البوت ($)**')
+        .addField('bc', 'ارسال رساله  معا (اسم المرسل+اسم السيرفر)للكل')
+        .addField('bc-bot', 'ارسال رساله دون شي للكل')
+	message.channel.send(helpEmbed);
+    }
+});
 
 
 
@@ -43,8 +49,6 @@ client.on('message', message => {
     });
 	
 	
-	
-client.login('NTEyNzQ5NTQ4MjU5NzcwMzcw.Ds-CIg.oJouMLa0-O3EiUYz545FVGogWJk');
 
 
 
@@ -58,11 +62,10 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`اصبر فالصبر من الايمان`,"http://twitch.tv/y04zgamer")
+  client.user.setGame(`اصبر فالصبر من الايمان $help ||By - Saudi Shop TM||`,"http://twitch.tv/y04zgamer")
    client.user.setStatus("dnd")
 });
 
-client.login('NTEyNzQ5NTQ4MjU5NzcwMzcw.Ds-CIg.oJouMLa0-O3EiUYz545FVGogWJk');
 
 
 client.on('message', message => {
@@ -76,4 +79,4 @@ client.on('message', message => {
     }
     });
 
-client.login('NTEyNzQ5NTQ4MjU5NzcwMzcw.Ds-CIg.oJouMLa0-O3EiUYz545FVGogWJk');
+client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
