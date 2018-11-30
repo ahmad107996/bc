@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 
 
-client2.on('message', message => {
+client.on('message', message => {
     if (message.content === '$help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر...**')
